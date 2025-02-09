@@ -1,0 +1,1035 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffface;
+    color: #3d2a26;
+}
+
+.navigation {
+    color: #fb008a;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: #ffface;
+    width: 100%;
+    z-index: 3;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+#logo img {
+    width: 60px;
+    height: 60px;
+    rotate: 50deg;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0%;
+}
+
+nav ul li a {
+    color: #fb008a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #c77ae8;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+    background-color: #fd7fc0;
+    padding: 0% 5% 0% 12%;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff9c4;
+}
+
+.text h1 {
+    font-size: 80px;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text p {
+    margin-top: 24px;
+    width: 430px;
+    height: auto;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.image {
+    border: 1px solid #fd7fc0;
+    padding: 2px;
+    margin-top: 85px;
+}
+
+.image img {
+    width: 694px;
+    height: 694px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.naslov {
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fb008a;
+    font-size: 40px;
+}
+
+.inputi input,
+a {
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+input:last-child {
+    margin-right: 0px;
+}
+
+#searchButton {
+    background-color: #fd7fc0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#searchButton:hover {
+    background-color: #fb008a;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #3d2a26;
+}
+
+#hidden {
+    position: relative;
+}
+
+#hidden:hover::after {
+    content: "hakuna matata";
+    transform: rotate(180deg);
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: #fd7fc0;
+    color: #ffface;
+    padding: 5px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+
+.item img {
+    width: 230px;
+    height: 230px;
+}
+
+.red {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.red button {
+    width: 30px;
+    height: 100%;
+    background-color: #ffceea;
+    font-size: 22px;
+    color: #fb008a;
+    border: 1px solid #fb008a;
+    cursor: pointer;
+}
+
+.red button:hover {
+    background-color: #fb008a;
+    color: #ffceea;
+}
+
+.recipe {
+    width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.list a {
+    font-size: 20px;
+    background-color: #fd7fc0;
+    color: #fff;
+    padding: 8px;
+    border: 2px dashed #fb008a;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.list a:hover {
+    background-color: #c77ae8;
+    border: 2px dashed #a60ee7;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 450px;
+}
+
+.card img {
+    width: 450px;
+}
+
+.ispis {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    text-align: justify;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+.ispis span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.game {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.wheel-container {
+    position: relative;
+    width: 550px;
+}
+
+.wheel {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(#fb008a 0deg 30deg,
+            #a60ee7 30deg 60deg,
+            #ffceea 60deg 90deg,
+            pink 90deg 120deg,
+            violet 120deg 150deg,
+            #c77ae8 150deg 180deg,
+            #fb008a 180deg 210deg,
+            #a60ee7 210deg 240deg,
+            #ffceea 240deg 270deg,
+            pink 270deg 300deg,
+            violet 300deg 330deg,
+            #c77ae8 330deg 360deg);
+    transition: transform 3s;
+    z-index: 1;
+}
+
+.sakriveno {
+    color: #3d2a26;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    padding-top: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.pointer {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 40px solid black;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    z-index: 1;
+}
+
+#spin {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #fb008a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.tableText {
+    width: 400px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tableText table {
+    margin-top: 50px;
+}
+
+.tableText td {
+    padding: 20px;
+}
+
+.boje {
+    width: 20px;
+    border-radius: 50%;
+}
+
+#hotpink {
+    background-color: #fb008a;
+}
+
+#violet {
+    background-color: violet;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#purple {
+    background-color: #c77ae8;
+}
+
+#darkpurple {
+    background-color: #a60ee7;
+}
+
+#lightpink {
+    background-color: #ffceea;
+}
+
+.mainRadnici {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.radnici {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: #fff 7px solid;
+
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff9c4;
+
+}
+
+.profile-bio {
+    font-size: 16px;
+    color: #fff9c4;
+    margin-bottom: 15px;
+
+}
+
+.radnik {
+
+
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 25%;
+    margin-top: 30px;
+    padding: 27px;
+    text-align: center;
+    background-color: #fd7fc0;
+
+}
+
+.profile-posao {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffffff;
+    font-style: italic
+}
+
+.radniciNaslov {
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    color: #fb008a;
+    margin-bottom: 5%;
+    font-size: 40px;
+}
+
+.skirveni-radnik {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 25%;
+    margin-top: 50px;
+    padding: 27px;
+    text-align: center;
+
+}
+
+.skriveni-profile-pic {
+    height: 300px;
+}
+
+.KodMain {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 80px;
+}
+
+.formPromoKod {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 80px;
+    margin: 100px 0px;
+}
+
+.gornjiDio {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donjiDio {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sredina {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.KodMain h2 {
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    color: #fd7fc0;
+    margin-bottom: 5%;
+    font-size: 40px;
+}
+
+.inputkod input {
+    padding: 20px;
+    border: solid 5px white;
+    box-shadow: #fd7fc0 10px 10px;
+    border-radius: 40px;
+    background-color: #ffface;
+}
+
+.inputKod h2 {
+    color: #fb008a;
+}
+
+.promoKod {
+
+    width: 80%;
+    padding: 20px;
+    font-size: 100px;
+    border-radius: 40px;
+    background-color: #fd7fc0;
+    border: solid 3px #fd7fc0;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+.pobijeda {
+    font-style: normal;
+    color: #fb008a;
+
+    font-size: 90px;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+
+}
+
+.winDiv h1 {
+    position: absolute;
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+
+}
+
+.winDiv canvas {
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+
+}
+
+nav ul li a:hover {
+    color: #fd7fc0;
+    text-decoration: none;
+}
+
+#donut {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+
+    cursor: move;
+}
+
+.povratak {
+    font-style: normal;
+    color: #fb008a;
+    font-size: 70px;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: 90%;
+}
+
+.formaDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    width: 100%;
+    background-color: #ffceea;
+    padding: 40px 0 40px 0;
+    background-image: url(img/cover.png);
+    background-size: 40%;
+}
+
+.formaDiv form {
+    width: 450px;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #FFF4E6;
+}
+
+#registrationForm .samoInput {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #FFC0CB;
+    /* Soft pink border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#registrationForm input:focus {
+    border-color: #FF69B4;
+    /* Bright pink when focused */
+    outline: none;
+}
+
+#registrationForm button {
+    background-color: #FF69B4;
+    /* Bold pink button color */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#registrationForm button:hover {
+    background-color: #FF1493;
+    /* Darker pink on hover */
+}
+
+.error-message,
+.warning-message {
+    color: #FF6347;
+    /* Bright red for error and warning messages */
+    font-size: 0.9em;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #FF69B4;
+    /* Pink for eye icon */
+}
+
+.toggle-password:hover {
+    color: #FF1493;
+    /* Darker pink on hover */
+}
+
+.strength-indicator {
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    width: 0;
+    background-color: transparent;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+
+
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Aligns checkbox and label to the left */
+    margin: 15px 0;
+}
+
+#acceptTerms {
+    margin: 0;
+    width: auto;
+}
+
+.checkbox-container label {
+    margin: 0 0 0 5px;
+    font-size: 0.9rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+.api-message {
+    font-family: monospace;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+}
+
+
+.pitanja-section {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.pitanje {
+    background-color: #fcf9e4;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.pitanje-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pitanje-header span {
+    font-size: 1.2em;
+    color: #6b6b6b;
+}
+
+.odgovor {
+    display: none;
+    /* Hide answers initially */
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.4;
+}
+
+.toggle-answer-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #d35d90;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.toggle-answer-btn.disabled {
+    cursor: not-allowed;
+    color: #b0b0b0;
+}
+
+.toggle-answer-btn:hover:not(.disabled) {
+    color: #b32767;
+}
+
+.toggle-answer-btn.active {
+    transform: rotate(180deg);
+    /* Rotate arrow on active */
+}
+
+:root {
+    --primary-: #fd7fc0;
+    --secondary-: #ffe6d4;
+    --tertiary-: pink;
+}
+
+
+
+.footerMainTop h2 {
+    color: var(--secondary-);
+}
+
+footer {
+    font-family: "Rubik", system-ui;
+}
+
+.footerMainTop h3 {
+    color: white;
+    font-weight: 400;
+}
+
+.footerMainBottom h3 {
+    color: var(--secondary-);
+
+}
+
+.footerDiv {
+    display: block;
+}
+
+
+footer {
+    background-color: var(--primary-);
+    display: block;
+    width: auto;
+    height: fit-content;
+}
+
+.footerMain {
+    padding: 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerLogo {
+    height: 80px;
+}
+
+.footerPartOne img:hover {
+    background-color: rgba(0, 0, 0, 0.201);
+
+}
+
+.footerMainTop {
+    display: flex;
+    flex-direction: row;
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+.footerPartTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.footerPartOne {
+    padding-right: 20%;
+
+}
+
+.footerTitle {
+    margin-bottom: 10%;
+}
+
+footer hr {
+    border: var(--secondary-) solid 2px;
+
+}
+
+.footerMainBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerBottomContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerBottomTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 260px;
+}
+
+.footerMainTop h2 {
+    font-weight: 900;
+}
+
+.footerSocialMedia img {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.footerSocialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footerContact a {
+    color: var(--tertiary-);
+}
+
+.footerContent li:hover,
+.footerBottomTwo a:hover {
+    transform: scale(1.04);
+}
+
+@media screen and (max-width: 1100px) {
+
+    .footerPartOne,
+    .footerPartTwo {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .footerMainTop {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerLogo {
+        height: 60px;
+    }
+
+    .footerMain {
+        padding: 1%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer h3 {
+        font-size: medium;
+    }
+
+    footer h2 {
+        font-size: large;
+    }
+
+    .footerPartOne,
+    .footerPartTwo {
+        width: 100%;
+    }
+
+    .footerMainTop {
+        flex-direction: column;
+    }
+
+    .footerMain {
+        padding: 2%;
+    }
+
+    .footerBottomContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerBottomTwo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footerBottomTwo h3 {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    footer h3 {
+        font-size: medium;
+    }
+
+    footer h2 {
+        font-size: large;
+    }
+
+    .footerLogo {
+        height: 50px;
+    }
+
+    .footerMain {
+        padding: 10px;
+    }
+
+    .footerBottomContent {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .footerBottomTwo {
+        flex-direction: row;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerBottomTwo h3 {
+        margin-bottom: 10px;
+
+    }
+
+    .footerSocialMedia img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .footerSocialMedia {
+        display: flex;
+        flex-direction: row;
+        width: 100px;
+        margin: auto;
+
+    }
+}
