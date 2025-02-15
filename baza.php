@@ -20,7 +20,7 @@ INSERT INTO krafne (ime, cijena, nadjev, slika) VALUES
 ('Kokos Krafna', 3.00, 'Kokos', 'img/krafna5.png'),
 ('Karamela Krafna', 2.50, 'Karamela', 'img/krafna6.png'),
 ('Pistacija Krafna', 3.50, 'Pistacija', 'img/krafna7.png'),
-('upsi sifrirano', 85.00, '@UXRsDJ*A', 'img/flag.png');
+('Pronašao si bazu', 85.00, '@UXRsDJ*A', 'img/flag.png');
 
 
 CREATE TABLE IF NOT EXISTS recepti (
