@@ -53,30 +53,9 @@ $(document).ready(function () {
         strengthIndicator.css({ width: '0%', backgroundColor: 'transparent' });
         $('#termsWarning').hide();
 
-        // Retrieve the values from the form
-        const ime = $('input[name="ime"]').val();
-        const prezime = $('input[name="prezime"]').val();
-        const mail = $('input[name="mail"]').val();
-        const godina = $('input[name="god"]').val();
-        const sifra = $('input[name="sifra"]').val();
-        const isTermsAccepted = $('#acceptTerms').is(':checked');
+        alert('Neuspješna prijava.');
+        $('input').addClass('error');
 
-        // Check if the inputs match the specific values
-        if (ime === 'Matea' && prezime === 'Cezar' && mail === 'CezarovicM@gmail.com' &&
-            godina === '2000' && sifra === 'cR29TuFR72*' && isTermsAccepted) {
-
-            // Display the fetch request as a string below the form
-            const fetchCodeString = `fetch("https://gogssplit.org/krafne/api.php?action=get_flag&command=ispeci%20krafnu").then(response => response.json()).then(data => console.log(data.message)).catch(error => console.error('Greška:', error));`;
-            $('<p>', {
-                text: fetchCodeString,
-                class: 'api-message'
-            }).appendTo('#registrationForm');
-
-        } else {
-            // If inputs do not match, display an error message
-            alert('Uneseni podaci nisu točni. Pokušajte ponovno s točnim podacima.');
-            $('input').addClass('error');
-        }
     });
 
     // Remove error classes and hide messages on input

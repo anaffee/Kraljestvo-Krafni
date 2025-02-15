@@ -221,11 +221,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="checkbox-container">
                 <input type="checkbox" id="acceptTerms">
-                <label for="acceptTerms">Nisam robot!</label>
+                <label for="acceptTerms">Ne znam što je robots.txt</label>
             </div>
             <span class="warning-message" id="termsWarning">Morate potvrditi.</span>
 
-            <button type="submit">Pošalji</button>
+          <button type="submit">Pošalji</button>
         </form>
     </div>
 
