@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -234,7 +233,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="wheel-container">
             <div class="wheel" id="wheel"></div>
             <?php
-            if (isset($_GET['ispeci']) && $_GET['ispeci'] == 'reci') {
+            if (isset($_GET['skrivamSe']) == 'izaKola') {
                 echo '<p class="sakriveno">heksametar</p>';
             }
             ?>
@@ -320,18 +319,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <span>Kako osvojiti nagradu na kolu sreće?</span>
             <button class="toggle-answer-btn " disabled onclick="toggleAnswer(4)">&#9660;</button>
         </div>
-        <div class="odgovor">?ispeci=reci</div>
+        <div class="odgovor">?skrivamSe=izaKola</div>
     </div>
 </div>
 
-    <?php
-    if (!isset($_COOKIE["admin"])) {
-        setcookie("admin", "0", time() + (86400 * 30), "/");
-
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit;
-    }
-    ?>
     <div class="mainRadnici">
     <h1 class="radniciNaslov">Naši radnici</h1>
  
@@ -368,7 +359,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
  
         <?php
-        if (isset($_COOKIE["admin"]) && $_COOKIE["admin"] === "1") {
+        if (isset($_COOKIE["isAdmin"]) && $_COOKIE["isAdmin"] === "1") {
             echo '<div class="radnik">';
             echo '<img class="profile-pic" src="./img/osoba3.jpg">';
             echo '<h1 class="profile-name">Matea Cezar</h1>';
@@ -483,44 +474,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </footer>
     </div>
+    <script src="main.js"></script>
     <?php
     if (isset($_GET['action']) && $_GET['action'] === 'get_flag') {
         include 'api.php'; // Uključi API kod kada je to potrebno
         exit;
     }
     ?>
-
-
-<script>
-    $(document).ready(function() {
-        $('#passwordForm').on('submit', function(event) {
-            event.preventDefault(); 
-
-            $.ajax({
-                type: 'POST',
-                url: '', 
-                data: $(this).serialize(), 
-                success: function(response) {
-                    if (response.redirect) {
-                        window.location.href = response.redirect; 
-                    } 
-                },
-                error: function() {
-                    $('#result').html('<p class="error">An error occurred while processing your request.</p>');
-                }
-            });
-        });
-    });
-    </script>
-
-
-
-    <?php
-    if (isset($_GET['action']) && $_GET['action'] === 'get_flag') {
-        include 'api.php'; 
-        exit;
-    }
-    ?>
-    <script src="main.js"></script>
 </body>
 </html>

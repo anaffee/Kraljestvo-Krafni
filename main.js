@@ -103,3 +103,25 @@ function toggleAnswer(questionId) {
         answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
     }
 }
+
+document.cookie = "isAdmin=0; path=/; max-age=" + (86400 * 300);
+
+$(document).ready(function () {
+    $('#passwordForm').on('submit', function (event) {
+        event.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: '',
+            data: $(this).serialize(),
+            success: function (response) {
+                if (response.redirect) {
+                    window.location.href = response.redirect;
+                }
+            },
+            error: function () {
+                $('#result').html('<p class="error">An error occurred while processing your request.</p>');
+            }
+        });
+    });
+});
