@@ -252,8 +252,16 @@ function togglePasswordVisibility() {
 
 function toggleAnswer(questionId) {
     const answer = document.querySelector(`#pitanje${questionId} .odgovor`);
+    const button = document.querySelector(`#pitanje${questionId} .toggle-answer-btn`);
+    
     if (answer) {
-                answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+            button.innerHTML = "&#9650;";   
+        } else {
+            answer.style.display = 'none';
+            button.innerHTML = "&#9660;"; 
+        }
     }
 }
 

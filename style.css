@@ -896,6 +896,8 @@ nav ul li a:hover {
     padding: 15px;
     margin: 10px 0;
     transition: background-color 0.3s;
+    transition: 0.4s;
+
 }
 
 .pitanje-header {
@@ -903,6 +905,8 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    transition: max-height 0.2s ease-out;
+
 }
 
 .pitanje-header span {
@@ -911,14 +915,16 @@ nav ul li a:hover {
 }
 
 .odgovor {
-    display: none;
+    padding: 10px;
     margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-    line-height: 1.4;
+    display: none;
+    background-color: #fcf9e4;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; 
 }
 
-.toggle-answer-btn {
+.toggle-answer-btn {    
     background: none;
     border: none;
     font-size: 1.5em;
