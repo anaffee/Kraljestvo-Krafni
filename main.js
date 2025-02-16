@@ -12,7 +12,7 @@ const resultMessages = {
 
     const rect = spinnerElement.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
-    const topY = rect.top + (.05 * rect.height); // the arrow is 4%, so we use 5%
+    const topY = rect.top + (.05 * rect.height); 
     const element = document.elementFromPoint(centerX, topY);
     if (element?.parentElement?.parentElement !== spinnerElement) return null;
     return element?.id?.trim() || null;
@@ -28,7 +28,7 @@ const resultMessages = {
 
     spin.addEventListener('click', () => {
        if (animation) {
-          animation.cancel(); // Reset the animation if it already exists
+          animation.cancel(); 
        }
        spin.disabled = true;
        const randomAdditionalDegrees = Math.random() * 360 + 1800;
@@ -54,7 +54,7 @@ const resultMessages = {
           const currentValue = getResultsAtTop(node);
 
           if (currentValue && resultMessages[currentValue]) {
-             //   spin.textContent = resultMessages[currentValue];
+            
 
              const popup = document.getElementById('popup');
              popup.innerHTML = `
@@ -68,14 +68,14 @@ const resultMessages = {
              happy();
              setTimeout(() => {
                 popup.classList.remove('active');
-                // Hide the popup
+            
              }, 3000);
           }
        };
     });
  }
 
- let confettiAnimationId; // Global variable to store the animation frame ID
+ let confettiAnimationId; 
 
  function happy() {
     let W = window.innerWidth;
@@ -106,9 +106,9 @@ const resultMessages = {
     }
 
     function confettiParticle() {
-       this.x = Math.random() * W; // x
-       this.y = Math.random() * H - H; // y
-       this.r = randomFromTo(11, 33); // radius
+       this.x = Math.random() * W;
+       this.y = Math.random() * H - H; 
+       this.r = randomFromTo(11, 33); 
        this.d = Math.random() * maxConfettis + 11;
        this.color =
           possibleColors[Math.floor(Math.random() * possibleColors.length)];
@@ -127,7 +127,7 @@ const resultMessages = {
     }
 
     function Draw() {
-       context.clearRect(0, 0, W, H); // Clear canvas before drawing new frame
+       context.clearRect(0, 0, W, H); 
 
        for (let i = 0; i < maxConfettis; i++) {
           particles[i].draw();
@@ -144,8 +144,6 @@ const resultMessages = {
 
           if (particle.y <= H) remainingFlakes++;
 
-          // If a confetti has fluttered out of view,
-          // bring it back to above the viewport and let it re-fall.
           if (particle.x > W + 30 || particle.x < -30 || particle.y > H) {
              particle.x = Math.random() * W;
              particle.y = -30;
@@ -153,7 +151,6 @@ const resultMessages = {
           }
        }
 
-       // If all confetti has disappeared, stop the animation
        if (remainingFlakes === 0) {
           cancelAnimationFrame(confettiAnimationId);
        } else {
@@ -161,7 +158,6 @@ const resultMessages = {
        }
     }
 
-    // Resize canvas when window is resized
     window.addEventListener(
        "resize",
        function() {
@@ -173,20 +169,17 @@ const resultMessages = {
        false
     );
 
-    // Push new confetti objects to `particles[]`
     for (let i = 0; i < maxConfettis; i++) {
        particles.push(new confettiParticle());
     }
 
-    // Initialize canvas size
     canvas.width = W;
     canvas.height = H;
     confettiAnimationId = requestAnimationFrame(Draw);
 
-    // Stop confetti after 4 seconds
     setTimeout(() => {
-       cancelAnimationFrame(confettiAnimationId); // Stop the animation
-       context.clearRect(0, 0, W, H); // Clear the canvas
+       cancelAnimationFrame(confettiAnimationId); 
+       context.clearRect(0, 0, W, H); 
     }, 3000);
  }
 
@@ -194,7 +187,6 @@ const resultMessages = {
 
 var promoKod = document.getElementById("promoKod");
 
-// Change button text on hover
 promoKod.addEventListener("mouseenter", function () {
     promoKod.innerHTML = "Pošalji";
 });
@@ -243,7 +235,6 @@ $(document).ready(function () {
 
     });
 
-    // Remove error classes and hide messages on input
     $('input').on('input', function () {
         $(this).removeClass('error');
         $('#passwordError').hide();
@@ -251,7 +242,6 @@ $(document).ready(function () {
     });
 });
 
-// Toggle password visibility function
 function togglePasswordVisibility() {
     var passwordInput = $('input[name="sifra"]');
     var passwordType = passwordInput.attr('type') === 'password' ? 'text' : 'password';
@@ -263,8 +253,7 @@ function togglePasswordVisibility() {
 function toggleAnswer(questionId) {
     const answer = document.querySelector(`#pitanje${questionId} .odgovor`);
     if (answer) {
-        // Toggle display with smooth transition
-        answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+                answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
     }
 }
 

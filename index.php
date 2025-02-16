@@ -240,7 +240,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         if (spin) {
                             spin.onclick = function(event) {
-                                // Prevent the default action (if any)
                                 event.preventDefault();
 
                                 const popup = document.getElementById("popup");
@@ -252,13 +251,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 `;
                                 popup.classList.add("active");
 
-                                // Hide the popup after 3 seconds
                                 setTimeout(function() {
                                     popup.classList.remove("active");
                                 }, 3000);
 
-                                // Trigger the wheel spin animation after the popup closes
-                                 // Delay the spin until after popup closes
                             };
                         }
                     });
@@ -529,7 +525,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="main.js"></script>
     <?php
     if (isset($_GET['action']) && $_GET['action'] === 'get_flag') {
-        include 'api.php'; // Uključi API kod kada je to potrebno
+        include 'api.php'; 
         exit;
     }
     ?>

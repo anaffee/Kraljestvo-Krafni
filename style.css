@@ -297,7 +297,6 @@ input:last-child {
     position: relative;
 
     transition: transform 3s ease-out;
-    /* Ensure the wheel spins smoothly */
     z-index: 0;
  }
 
@@ -529,7 +528,6 @@ input:last-child {
     }
  }
 
- /* for demo */
  * {
     box-sizing: border-box;
  }
@@ -538,19 +536,15 @@ input:last-child {
 
  #canvas {
     position: fixed;
-    /* Ensure it stays on top of everything else */
     top: 0;
     left: 0;
     z-index: -1;
-    /* Ensure it’s above other content */
  }
 
  #popup {
     opacity: 0;
     transition: opacity 1s ease-out;
-    /* Fade-out effect */
     pointer-events: none;
-    /* Prevent interaction when hidden */
  }
 
  #popup.active {
@@ -794,7 +788,6 @@ nav ul li a:hover {
     padding: 12px;
     margin: 10px 0;
     border: 2px solid #FFC0CB;
-    /* Soft pink border */
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 1rem;
@@ -803,13 +796,11 @@ nav ul li a:hover {
 
 #registrationForm input:focus {
     border-color: #FF69B4;
-    /* Bright pink when focused */
     outline: none;
 }
 
 #registrationForm button {
     background-color: #FF69B4;
-    /* Bold pink button color */
     color: white;
     border: none;
     padding: 12px;
@@ -823,13 +814,11 @@ nav ul li a:hover {
 
 #registrationForm button:hover {
     background-color: #FF1493;
-    /* Darker pink on hover */
 }
 
 .error-message,
 .warning-message {
     color: #FF6347;
-    /* Bright red for error and warning messages */
     font-size: 0.9em;
 }
 
@@ -844,12 +833,10 @@ nav ul li a:hover {
     transform: translateY(-50%);
     cursor: pointer;
     color: #FF69B4;
-    /* Pink for eye icon */
 }
 
 .toggle-password:hover {
     color: #FF1493;
-    /* Darker pink on hover */
 }
 
 .strength-indicator {
@@ -870,7 +857,6 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Aligns checkbox and label to the left */
     margin: 15px 0;
 }
 
@@ -926,7 +912,6 @@ nav ul li a:hover {
 
 .odgovor {
     display: none;
-    /* Hide answers initially */
     margin-top: 10px;
     font-size: 1em;
     color: #333;
@@ -953,7 +938,6 @@ nav ul li a:hover {
 
 .toggle-answer-btn.active {
     transform: rotate(180deg);
-    /* Rotate arrow on active */
 }
 
 :root {
