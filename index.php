@@ -45,9 +45,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
-    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="navigation">
@@ -319,7 +329,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
    <canvas id="canvas"></canvas>
 
-
+    
     <div class="pitanja-section" id="pitanja">
     <h2 class="naslov">Pitanja</h2>
     
