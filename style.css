@@ -298,37 +298,13 @@ input:last-child {
     width: 550px;
 }
 
-.wheel {
+#wheel {
     width: 550px;
     height: 550px;
     border-radius: 50%;
     position: relative;
-    background: conic-gradient(#fb008a 0deg 30deg,
-            #a60ee7 30deg 60deg,
-            #ffceea 60deg 90deg,
-            pink 90deg 120deg,
-            violet 120deg 150deg,
-            #c77ae8 150deg 180deg,
-            #fb008a 180deg 210deg,
-            #a60ee7 210deg 240deg,
-            #ffceea 240deg 270deg,
-            pink 270deg 300deg,
-            violet 300deg 330deg,
-            #c77ae8 330deg 360deg);
-    transition: transform 3s;
-    z-index: 1;
-}
 
-.sakriveno {
-    color: #3d2a26;
-    width: 100px;
-    text-align: center;
-    margin: auto;
-    padding-top: 120px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: transform 3s ease-out;
     z-index: 0;
 }
 
@@ -357,6 +333,31 @@ input:last-child {
     border-radius: 10px;
 }
 
+.popup {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px 5px rgba(110, 11, 90, 0.64);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.popup h1 {
+    color: #fb008a;
+}
+
+.popup h2 {
+    color: #fd7fc0;
+}
+
+.popup.active {
+    display: block;
+}
+
 .tableText {
     width: 400px;
     font-size: 18px;
@@ -374,6 +375,7 @@ input:last-child {
 .boje {
     width: 20px;
     border-radius: 50%;
+    box-sizing: content-box;
 }
 
 #hotpink {
@@ -398,6 +400,164 @@ input:last-child {
 
 #lightpink {
     background-color: #ffceea;
+}
+
+:where(.ui-wheel-of-fortune) {
+    all: unset;
+    margin-top: 30px;
+    aspect-ratio: 1 / 1;
+    container-type: inline-size;
+    direction: ltr;
+    display: grid;
+    position: relative;
+    width: 100%;
+
+    &::after {
+        aspect-ratio: 1/cos(30deg);
+        background-color: crimson;
+        clip-path: polygon(50% 100%, 100% 0, 0 0);
+        content: "";
+        height: 4cqi;
+        position: absolute;
+        place-self: start center;
+        scale: 1.4;
+    }
+
+    &>* {
+        position: absolute;
+    }
+
+    button {
+        aspect-ratio: 1 / 1;
+        background: hsla(0, 0%, 100%, .8);
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 5cqi;
+        place-self: center;
+        width: 20cqi;
+        visibility: hidden;
+    }
+
+    ul {
+        all: unset;
+        clip-path: inset(0 0 0 0 round 50%);
+        display: grid;
+        inset: 0;
+        place-content: center start;
+
+        li {
+            align-content: center;
+            aspect-ratio: 1 / calc(2 * tan(180deg / var(--_items)));
+            background: hsl(calc(360deg / var(--_items) * calc(var(--_idx))), 100%, 75%);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            display: grid;
+            font-size: 5cqi;
+            grid-area: 1 / -1;
+            padding-left: 1ch;
+            rotate: calc(360deg / var(--_items) * calc(var(--_idx) - 1));
+            transform-origin: center right;
+            user-select: none;
+            width: 50cqi;
+
+            &:nth-of-type(1) {
+                --_idx: 1;
+            }
+
+            &:nth-of-type(2) {
+                --_idx: 2;
+            }
+
+            &:nth-of-type(3) {
+                --_idx: 3;
+            }
+
+            &:nth-of-type(4) {
+                --_idx: 4;
+            }
+
+            &:nth-of-type(5) {
+                --_idx: 5;
+            }
+
+            &:nth-of-type(6) {
+                --_idx: 6;
+            }
+
+            &:nth-of-type(7) {
+                --_idx: 7;
+            }
+
+            &:nth-of-type(8) {
+                --_idx: 8;
+            }
+
+            &:nth-of-type(9) {
+                --_idx: 9;
+            }
+
+            &:nth-of-type(10) {
+                --_idx: 10;
+            }
+
+            &:nth-of-type(11) {
+                --_idx: 11;
+            }
+
+            &:nth-of-type(12) {
+                --_idx: 12;
+            }
+        }
+
+        &[data-itemCount='1'] {
+            li {
+                aspect-ratio: 1/1;
+                display: block;
+                rotate: 0;
+                clip-path: none;
+                width: 100cqi;
+            }
+        }
+
+        &[data-itemCount='2'] {
+            li {
+                height: 100cqi;
+                clip-path: none;
+            }
+        }
+
+        &[data-itemCount='3'] {
+            li {
+                aspect-ratio: 1 / 2;
+                clip-path: polygon(-35% -100%, 100% 50%, 0% 145%);
+            }
+        }
+
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#popup {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    pointer-events: none;
+}
+
+#popup.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .mainRadnici {
@@ -439,16 +599,13 @@ input:last-child {
 }
 
 .radnik {
-
-
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 25%;
+    width: 25%;
     margin-top: 30px;
     padding: 27px;
     text-align: center;
     background-color: #fd7fc0;
-
 }
 
 .profile-posao {
@@ -466,19 +623,9 @@ input:last-child {
     font-size: 40px;
 }
 
-.skirveni-radnik {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 25%;
-    margin-top: 50px;
-    padding: 27px;
-    text-align: center;
-
-}
-
 .skriveni-profile-pic {
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .KodMain {
@@ -637,7 +784,6 @@ nav ul li a:hover {
     padding: 12px;
     margin: 10px 0;
     border: 2px solid #FFC0CB;
-    /* Soft pink border */
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 1rem;
@@ -646,13 +792,11 @@ nav ul li a:hover {
 
 #registrationForm input:focus {
     border-color: #FF69B4;
-    /* Bright pink when focused */
     outline: none;
 }
 
 #registrationForm button {
     background-color: #FF69B4;
-    /* Bold pink button color */
     color: white;
     border: none;
     padding: 12px;
@@ -666,13 +810,11 @@ nav ul li a:hover {
 
 #registrationForm button:hover {
     background-color: #FF1493;
-    /* Darker pink on hover */
 }
 
 .error-message,
 .warning-message {
     color: #FF6347;
-    /* Bright red for error and warning messages */
     font-size: 0.9em;
 }
 
@@ -687,12 +829,10 @@ nav ul li a:hover {
     transform: translateY(-50%);
     cursor: pointer;
     color: #FF69B4;
-    /* Pink for eye icon */
 }
 
 .toggle-password:hover {
     color: #FF1493;
-    /* Darker pink on hover */
 }
 
 .strength-indicator {
@@ -713,7 +853,6 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Aligns checkbox and label to the left */
     margin: 15px 0;
 }
 
@@ -753,6 +892,8 @@ nav ul li a:hover {
     padding: 15px;
     margin: 10px 0;
     transition: background-color 0.3s;
+    transition: 0.4s;
+
 }
 
 .pitanje-header {
@@ -760,6 +901,8 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    transition: max-height 0.2s ease-out;
+
 }
 
 .pitanje-header span {
@@ -768,12 +911,13 @@ nav ul li a:hover {
 }
 
 .odgovor {
-    display: none;
-    /* Hide answers initially */
+    padding: 10px;
     margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-    line-height: 1.4;
+    display: none;
+    background-color: #fcf9e4;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
 }
 
 .toggle-answer-btn {
@@ -796,7 +940,6 @@ nav ul li a:hover {
 
 .toggle-answer-btn.active {
     transform: rotate(180deg);
-    /* Rotate arrow on active */
 }
 
 :root {

@@ -43,13 +43,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
-    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="navigation">
@@ -247,46 +257,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="game" id="game">
-        <div class="wheel-container">
-            <div class="wheel" id="wheel"></div>
-            <?php
-            if (isset($_GET['skrivamSe']) == 'izaKola') {
-                echo '<p class="sakriveno">heksametar</p>';
-            }
-            ?>
-            <div class="pointer"></div>
-            <button id="spin">Zavrti kolo </button>
-        </div>
-        <div class="tableText">
-            <h1 class="naslov">Zavrti kolo i otkrij pravi promo kod</h1>
-            <table>
-                <tr>
-                    <td id="hotpink" class="boje"></td>
-                    <td class="txt">2 besplatne Kakao Krafne</td>
-                </tr>
-                <tr>
-                    <td id="darkpurple" class="boje"></td>
-                    <td>Upsi, ništa za tebe :(</td>
-                </tr>
-                <tr>
-                    <td id="lightpink" class="boje"></td>
-                    <td>3 besplatne Kokos Krafne</td>
-                </tr>
-                <tr>
-                    <td id="pink" class="boje"></td>
-                    <td>5% popusta za iduću kupnju</td>
-                </tr>
-                <tr>
-                    <td id="violet" class="boje"></td>
-                    <td>Upsi, ništa za tebe :(</td>
-                </tr>
-                <tr>
-                    <td id="purple" class="boje"></td>
-                    <td>Besplatna dostava tjedan dana</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+      <div class="wheel-container">
+         <?php
+         if (isset($_GET['skrivamSe']) == 'izaKola') {
+            echo '<script src="wheel.js"></script>';
+         }
+         ?>
+         <fieldset class="ui-wheel-of-fortune" style="--_items: 12;">
+            <ul data-itemCount="12" id="wheel">
+               <li id="hotpink"></li>
+               <li id="darkpurple"></li>
+               <li id="lightpink"></li>
+               <li id="pink"></li>
+               <li id="violet"></li>
+               <li id="purple"></li>
+               <li id="hotpink"></li>
+               <li id="darkpurple"></li>
+               <li id="lightpink"></li>
+               <li id="pink"></li>
+               <li id="violet"></li>
+               <li id="purple"></li>
+            </ul>
+            <button type="button"></button>
+         </fieldset>
+
+         <button id="spin">Zavrti kolo </button>
+
+      </div>
+      <div class="tableText">
+         <h1 class="naslov">Zavrti kolo i otkrij pravi promo kod</h1>
+         <table>
+            <tr>
+               <td id="hotpink" class="boje"></td>
+               <td class="txt">2 besplatne Kakao Krafne</td>
+            </tr>
+            <tr>
+               <td id="darkpurple" class="boje"></td>
+               <td>Upsi, ništa za tebe :(</td>
+            </tr>
+            <tr>
+               <td id="lightpink" class="boje"></td>
+               <td>3 besplatne Kokos Krafne</td>
+            </tr>
+            <tr>
+               <td id="pink" class="boje"></td>
+               <td>5% popusta za iduću kupnju</td>
+            </tr>
+            <tr>
+               <td id="violet" class="boje"></td>
+               <td>Upsi, ništa za tebe :(</td>
+            </tr>
+            <tr>
+               <td id="purple" class="boje"></td>
+               <td>Besplatna dostava tjedan dana</td>
+            </tr>
+         </table>
+      </div>
+   <div class="popup" id="popup"></div>
+
+   </div>   
+
+   <canvas id="canvas"></canvas>
+
+    
     <div class="pitanja-section" id="pitanja">
     <h2 class="naslov">Pitanja</h2>
     
@@ -384,8 +417,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<p class="profile-bio">/jodced.sks</p>';
             echo '</div>'; 
         } else {
-            echo '<div class="skirveni-radnik">';
-            echo '<img class="skriveni-profile-pic" src="./img/topsecret.jpg">';
+            echo '<div class="radnik">';
+            echo '<img class="profile-pic" src="./img/topsecret.jpg">';
+            echo '<h1 class="profile-name">Tajni investitor</h1>';
+            echo '<h3 class="profile-posao">Menadžer</h3>';
+            echo '<p class="profile-bio">Informacija moguće isključivo admistratoru</p>';
             echo '</div>'; 
         }
         ?>
@@ -494,7 +530,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="main.js"></script>
     <?php
     if (isset($_GET['action']) && $_GET['action'] === 'get_flag') {
-        include 'api.php'; // Uključi API kod kada je to potrebno
+        include 'api.php'; 
         exit;
     }
     ?>
