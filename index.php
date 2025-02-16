@@ -231,46 +231,97 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="game" id="game">
-        <div class="wheel-container">
-            <div class="wheel" id="wheel"></div>
-            <?php
-            if (isset($_GET['skrivamSe']) == 'izaKola') {
-                echo '<p class="sakriveno">heksametar</p>';
-            }
-            ?>
-            <div class="pointer"></div>
-            <button id="spin">Zavrti kolo </button>
-        </div>
-        <div class="tableText">
-            <h1 class="naslov">Zavrti kolo i otkrij pravi promo kod</h1>
-            <table>
-                <tr>
-                    <td id="hotpink" class="boje"></td>
-                    <td class="txt">2 besplatne Kakao Krafne</td>
-                </tr>
-                <tr>
-                    <td id="darkpurple" class="boje"></td>
-                    <td>Upsi, ništa za tebe :(</td>
-                </tr>
-                <tr>
-                    <td id="lightpink" class="boje"></td>
-                    <td>3 besplatne Kokos Krafne</td>
-                </tr>
-                <tr>
-                    <td id="pink" class="boje"></td>
-                    <td>5% popusta za iduću kupnju</td>
-                </tr>
-                <tr>
-                    <td id="violet" class="boje"></td>
-                    <td>Upsi, ništa za tebe :(</td>
-                </tr>
-                <tr>
-                    <td id="purple" class="boje"></td>
-                    <td>Besplatna dostava tjedan dana</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+      <div class="wheel-container">
+         <?php
+         if (isset($_GET['skrivamSe']) == 'izaKola') {
+            echo '<script>
+                    window.addEventListener("DOMContentLoaded", (event) => {
+                        const spin = document.getElementById("spin");
+
+                        if (spin) {
+                            spin.onclick = function(event) {
+                                // Prevent the default action (if any)
+                                event.preventDefault();
+
+                                const popup = document.getElementById("popup");
+                                popup.innerHTML = `
+                                    <div class="boxPop">
+                                        <h2>Nova sifra: </h2>
+                                        <h1>Heksametar</h1>
+                                    </div>
+                                `;
+                                popup.classList.add("active");
+
+                                // Hide the popup after 3 seconds
+                                setTimeout(function() {
+                                    popup.classList.remove("active");
+                                }, 3000);
+
+                                // Trigger the wheel spin animation after the popup closes
+                                 // Delay the spin until after popup closes
+                            };
+                        }
+                    });
+                </script>';
+         }
+         ?>
+         <fieldset class="ui-wheel-of-fortune" style="--_items: 12;">
+            <ul data-itemCount="12" id="wheel">
+               <li id="hotpink"></li>
+               <li id="darkpurple"></li>
+               <li id="lightpink"></li>
+               <li id="pink"></li>
+               <li id="violet"></li>
+               <li id="purple"></li>
+               <li id="hotpink"></li>
+               <li id="darkpurple"></li>
+               <li id="lightpink"></li>
+               <li id="pink"></li>
+               <li id="violet"></li>
+               <li id="purple"></li>
+            </ul>
+            <button type="button"></button>
+         </fieldset>
+
+         <button id="spin">Zavrti kolo </button>
+
+      </div>
+      <div class="tableText">
+         <h1 class="naslov">Zavrti kolo i otkrij pravi promo kod</h1>
+         <table>
+            <tr>
+               <td id="hotpink" class="boje"></td>
+               <td class="txt">2 besplatne Kakao Krafne</td>
+            </tr>
+            <tr>
+               <td id="darkpurple" class="boje"></td>
+               <td>Upsi, ništa za tebe :(</td>
+            </tr>
+            <tr>
+               <td id="lightpink" class="boje"></td>
+               <td>3 besplatne Kokos Krafne</td>
+            </tr>
+            <tr>
+               <td id="pink" class="boje"></td>
+               <td>5% popusta za iduću kupnju</td>
+            </tr>
+            <tr>
+               <td id="violet" class="boje"></td>
+               <td>Upsi, ništa za tebe :(</td>
+            </tr>
+            <tr>
+               <td id="purple" class="boje"></td>
+               <td>Besplatna dostava tjedan dana</td>
+            </tr>
+         </table>
+      </div>
+   <div class="popup" id="popup"></div>
+
+   </div>   
+
+   <canvas id="canvas"></canvas>
+
+
     <div class="pitanja-section" id="pitanja">
     <h2 class="naslov">Pitanja</h2>
     

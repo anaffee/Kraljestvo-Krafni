@@ -289,18 +289,15 @@ input:last-child {
     position: relative;
     width: 550px;
  }
-
  #wheel {
-    width: 550px;
-    height: 550px;
-    border-radius: 50%;
-    position: relative;
-
-    transition: transform 3s ease-out;
-    /* Ensure the wheel spins smoothly */
-    z-index: 0;
- }
-
+width: 550px;
+height: 550px;
+border-radius: 50%;
+position: relative;
+aspect-ratio: 1;
+transition: transform 3s ease-out; /* Ensure the wheel spins smoothly */
+z-index: 0;
+}
  .pointer {
     width: 0;
     height: 0;
@@ -329,28 +326,27 @@ input:last-child {
  .popup {
     display: none;
     position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 5px 5px rgba(110, 11, 90, 0.64);
+    box-shadow:5px 5px 5px 5px rgba(110, 11, 90, 0.64);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
  }
 
- .popup h1 {
+ .popup h1{
     color: #fb008a;
  }
 
- .popup h2 {
+ .popup h2{
     color: #fd7fc0;
  }
-
  .popup.active {
     display: block;
  }
-
  .tableText {
     width: 400px;
     font-size: 18px;
@@ -429,7 +425,7 @@ input:last-child {
        font-size: 5cqi;
        place-self: center;
        width: 20cqi;
-       visibility: hidden;
+       visibility:hidden;
     }
 
     ul {
@@ -534,29 +530,28 @@ input:last-child {
     box-sizing: border-box;
  }
 
-
+ body {
+    font-family: system-ui, sans-serif;
+ }
 
  #canvas {
-    position: fixed;
-    /* Ensure it stays on top of everything else */
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* Ensure it’s above other content */
- }
+position: fixed; /* Ensure it stays on top of everything else */
+top: 0;
+left: 0;
+z-index: -1; /* Ensure it’s above other content */
+}
 
- #popup {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-    /* Fade-out effect */
-    pointer-events: none;
-    /* Prevent interaction when hidden */
- }
+#popup {
+opacity: 0;
+transition: opacity 1s ease-out; /* Fade-out effect */
+pointer-events: none; /* Prevent interaction when hidden */
+}
 
- #popup.active {
-    opacity: 1;
-    pointer-events: auto;
- }
+#popup.active {
+opacity: 1;
+pointer-events: auto;
+}
+
 .mainRadnici {
     width: 80%;
     margin: 100px auto;
