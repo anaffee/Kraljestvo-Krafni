@@ -73,15 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div class="header" id="kraljevstvo_krafni">
         <div class="text">
-            <h1>Kraljevstvo</h1>
-            <h1 id="hidden">Krafni</h1>
+            <h1>Kraljevstvo <br> Krafni</h1>
             <div class="image-row">
+                <img src="img/krafna1.png" alt="krafna" class="image-row-item">
+                <img src="img/krafna6.png" alt="krafna" class="image-row-item">
                 <img src="img/logo.png" alt="krafna" class="image-row-item">
                 <img src="img/krafna1.png" alt="krafna" class="image-row-item">
                 <img src="img/krafna6.png" alt="krafna" class="image-row-item">
                 <div class="image-row-item" id="droppable"></div>
-                <img src="img/krafna1.png" alt="krafna" class="image-row-item">
-                <img src="img/krafna6.png" alt="krafna" class="image-row-item">
             </div>
             <p>
             Iza svakog dijela stranice skriva se novi promo kod, a svaki klik otkriva 
@@ -93,6 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="image">
             <img src="img/pozadina.png" alt="planina krafna">
         </div>
+    </div>
+    <div class="traka">
     </div>
     <div class="menu" id="menu">
         <div class="top">

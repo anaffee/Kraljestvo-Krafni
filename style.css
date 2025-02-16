@@ -87,7 +87,6 @@ nav ul li a:hover {
     font-size: 80px;
     font-family: "Luckiest Guy", cursive, sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 .text p {
@@ -96,17 +95,20 @@ nav ul li a:hover {
     height: auto;
     text-align: justify;
     font-size: 18px;
+    font-style: italic;
+    line-height: 1.4;
 }
 
 .image {
     border: 1px solid #fd7fc0;
     padding: 2px;
     margin-top: 85px;
+    z-index: 1;
 }
 
 .image img {
-    width: 694px;
-    height: 694px;
+    width: 680px;
+    height: 680px;
 }
 
 .menu {
@@ -181,23 +183,6 @@ input:last-child {
     flex-direction: column;
     border-radius: 10px;
     border: 1px solid #3d2a26;
-}
-
-#hidden {
-    position: relative;
-}
-
-#hidden:hover::after {
-    content: "hakuna matata";
-    transform: rotate(180deg);
-    position: absolute;
-    top: 90%;
-    left: 0;
-    background-color: #fd7fc0;
-    color: #ffface;
-    padding: 5px;
-    font-size: 18px;
-    white-space: nowrap;
 }
 
 .image-row {

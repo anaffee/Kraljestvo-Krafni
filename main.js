@@ -30,7 +30,7 @@ $(document).ready(function () {
                 url: 'update.php',
                 type: 'POST',
                 success: function (response) {
-                    $('.menu').append(response);
+                    $('.traka').html(response);
                 }
             });
         }
