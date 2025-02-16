@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -328,31 +329,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  
     <div class="radnici" id="Radnici">
         <div class="radnik">
-            <img class="profile-pic" src="./img/osoba1.jpg">
+            <img class="profile-pic" src="./img/radnik.jpg">
             <h1 class="profile-name">Ivana Kovač</h1>
             <h3 class="profile-posao">Dekoratorka krafni</h3>
             <p class="profile-bio">Stručnjakinja za dekoriranje krafni, poznata po kreativnim i unikatnim dizajnima.</p>
         </div>
         <div class="radnik">
-            <img class="profile-pic" src="./img/osoba2.jpeg">
+            <img class="profile-pic" src="./img/radnik2.jpeg">
             <h1 class="profile-name">Marko Horvat</h1>
             <h3 class="profile-posao">Dostavljač</h3>
             <p class="profile-bio">Dostavlja svježe krafne, poznat po točnosti i prijateljskom pristupu.</p>
         </div>
         <div class="radnik">
-            <img class="profile-pic" src="./img/osoba4.jpeg">
+            <img class="profile-pic" src="./img/radnik3.jpeg">
             <h1 class="profile-name">Ana Petrović</h1>
             <h3 class="profile-posao">Glavna pekarica</h3>
             <p class="profile-bio">Iskusna majstorica krafni, zadužena za kreiranje recepata i vođenje tima.</p>
         </div>
         <div class="radnik">
-            <img class="profile-pic" src="./img/osoba5.jpg">
+            <img class="profile-pic" src="./img/radnik4.jpg">
             <h1 class="profile-name">Lana Marušić</h1>
             <h3 class="profile-posao">Prodavačica</h3>
             <p class="profile-bio">Ljubazna i uvijek spremna pomoći kupcima s izborom savršene krafne.</p>
         </div>
         <div class="radnik">
-            <img class="profile-pic" src="./img/osoba6.jpg">
+            <img class="profile-pic" src="./img/radnik5.jpg">
             <h1 class="profile-name">Petra Jurković</h1>
             <h3 class="profile-posao">Pekarica specijalizirana za punjenja</h3>
             <p class="profile-bio">Specijalistica za bogata punjenja krafni s raznolikim okusima.</p>
@@ -361,7 +362,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php
         if (isset($_COOKIE["isAdmin"]) && $_COOKIE["isAdmin"] === "1") {
             echo '<div class="radnik">';
-            echo '<img class="profile-pic" src="./img/osoba3.jpg">';
+            echo '<img class="profile-pic" src="./img/radnik6.jpg">';
             echo '<h1 class="profile-name">Matea Cezar</h1>';
             echo '<h3 class="profile-posao">Menadžer</h3>';
             echo '<p class="profile-bio">/jodced.sks</p>';
