@@ -69,7 +69,7 @@ nav ul li a:hover {
 .header {
     display: flex;
     flex-direction: row;
-    height: 700px;
+    height: 740px;
     background-color: #fd7fc0;
     padding: 0% 5% 0% 12%;
 }
@@ -124,12 +124,24 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 
+.naslov-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
 .naslov {
     font-family: "Luckiest Guy", cursive, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #fb008a;
     font-size: 40px;
+}
+
+#draggable {
+    width: 70px;
+    height: 70px;
 }
 
 .inputi input,
@@ -188,6 +200,17 @@ input:last-child {
     white-space: nowrap;
 }
 
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(6, 70px);
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.image-row-item {
+    width: 70px;
+    height: 70px;
+}
 
 .item img {
     width: 230px;

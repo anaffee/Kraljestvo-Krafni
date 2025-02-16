@@ -1,3 +1,5 @@
+document.cookie = "isAdmin=0; path=/; max-age=" + (86400 * 300);
+
 const wheel = document.getElementById('wheel');
 const spinButton = document.getElementById('spin');
 let totalRotation = 1;
@@ -9,7 +11,6 @@ spinButton.addEventListener('click', () => {
 
 var promoKod = document.getElementById("promoKod");
 
-// Change button text on hover
 promoKod.addEventListener("mouseenter", function () {
     promoKod.innerHTML = "Pošalji";
 });
@@ -18,6 +19,23 @@ promoKod.addEventListener("mouseleave", function () {
     promoKod.innerHTML = "Promo kod";
 });
 $(document).ready(function () {
+    $('#draggable').draggable({
+        revert: "invalid"
+    })
+
+    $('#droppable').droppable({
+        accept: "#draggable",
+        drop: function () {
+            $.ajax({
+                url: 'update.php',
+                type: 'POST',
+                success: function (response) {
+                    $('.menu').append(response);
+                }
+            });
+        }
+    })
+
     const strengthIndicator = $('#strengthIndicator');
 
     $('input[name="sifra"]').on('input', function () {
@@ -58,7 +76,6 @@ $(document).ready(function () {
 
     });
 
-    // Remove error classes and hide messages on input
     $('input').on('input', function () {
         $(this).removeClass('error');
         $('#passwordError').hide();
@@ -66,7 +83,6 @@ $(document).ready(function () {
     });
 });
 
-// Toggle password visibility function
 function togglePasswordVisibility() {
     var passwordInput = $('input[name="sifra"]');
     var passwordType = passwordInput.attr('type') === 'password' ? 'text' : 'password';
@@ -78,12 +94,10 @@ function togglePasswordVisibility() {
 function toggleAnswer(questionId) {
     const answer = document.querySelector(`#pitanje${questionId} .odgovor`);
     if (answer) {
-        // Toggle display with smooth transition
         answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
     }
 }
 
-document.cookie = "isAdmin=0; path=/; max-age=" + (86400 * 300);
 
 $(document).ready(function () {
     $('#passwordForm').on('submit', function (event) {

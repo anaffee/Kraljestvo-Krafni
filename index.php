@@ -37,13 +37,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>Kraljevstvo Krafni</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -51,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="navigation">
         <a href="#kraljevstvo_krafni">
         <div id="logo">
-            <img src="img/logo.png" alt="logo">
+            <img src="img/logo.png" alt="krafna">
             <h1 class="naslov">Kraljevstvo Krafni</h1>
         </div>
         </a>
@@ -71,6 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="text">
             <h1>Kraljevstvo</h1>
             <h1 id="hidden">Krafni</h1>
+            <div class="image-row">
+                <img src="img/logo.png" alt="krafna" class="image-row-item">
+                <img src="img/krafna1.png" alt="krafna" class="image-row-item">
+                <img src="img/krafna6.png" alt="krafna" class="image-row-item">
+                <div class="image-row-item" id="droppable"></div>
+                <img src="img/krafna1.png" alt="krafna" class="image-row-item">
+                <img src="img/krafna6.png" alt="krafna" class="image-row-item">
+            </div>
             <p>
             Iza svakog dijela stranice skriva se novi promo kod, a svaki klik otkriva 
             novi trag. Pronađi svih sedam skrivenih promo kodova i dokaži svoje 
@@ -79,12 +91,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </p>
         </div>
         <div class="image">
-            <img src="img/pozadina.png" alt="krafne">
+            <img src="img/pozadina.png" alt="planina krafna">
         </div>
     </div>
     <div class="menu" id="menu">
         <div class="top">
-            <h1 class="naslov">Meni</h1>
+            <div class="naslov-container">
+                <h1 class="naslov">Meni</h1>
+                <img src="img/logo.png" alt="roza krafna" id="draggable">
+            </div>
             <form method="GET" class="inputi">
                 <input type="hidden" name="form_action" value="search">
                 <input type="checkbox" id="seeAll" name="seeAll" value="1" style="display:none;">
