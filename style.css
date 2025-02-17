@@ -1184,3 +1184,115 @@ footer a {
 
     }
 }
+.container {
+    margin-top:50px ;
+    margin-bottom:50px ;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between ;
+    align-items: center;
+    margin:auto;
+    height:600px;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    padding: 16px;
+    margin-top: -50px;
+    color: #fb008a;
+
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .arrows{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+.gallery{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mySlides img{
+    width:500px;
+}
+
+.galleryTxt{
+    width:40%;
+}
+.galleryMain h1{
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    color: #fb008a;
+    margin-bottom: 5%;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+.galleryTxt p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+}
