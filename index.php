@@ -498,9 +498,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <a href="https://www.instagram.com/"><img class="instagram"
                                                     src="./img/insta.png"></a>
                                             <a href="https://www.youtube.com/"><img class="facebook"
-                                                    src="./img/youtube.jpg"></a>
+                                                    src="./img/youtube.png"></a>
                                             <a href="https://www.facebook.com/"><img class="youtube"
-                                                    src="./img/fb.jpg"></a>
+                                                    src="./img/facebook.png"></a>
+                                            <a href="https://x.com/"><img class="x"
+                                                    src="./img/x.png"></a>
                                         </div>
                                     </li>
                                 </ul>
