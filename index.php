@@ -501,8 +501,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                     src="./img/youtube.png"></a>
                                             <a href="https://www.facebook.com/"><img class="youtube"
                                                     src="./img/facebook.png"></a>
-                                            <a href="https://x.com/"><img class="x"
-                                                    src="./img/x.png"></a>
+                                            <a href="https://x.com/"><img class="x" src="./img/x.png"></a>
+                                            <a href="https://www.pinterest.com/"><img class="pinterest" 
+                                                    src="./img/pinterest.png"></a>
                                         </div>
                                     </li>
                                 </ul>
