@@ -1329,8 +1329,6 @@ nav ul li a:hover {
     --tertiary-: pink;
 }
 
-
-
 .footerMainTop h2 {
     color: var(--secondary-);
 }
@@ -1464,6 +1462,9 @@ footer a {
         width: 100%;
         padding-right: 0;
     }
+    /* .footerPartTwo{
+        margin-top: 40px;
+    } */
 
     .footerMainTop {
         flex-direction: column;
@@ -1472,7 +1473,7 @@ footer a {
     }
 
     .footerLogo {
-        height: 60px;
+        height: fit-content;
     }
 
     .footerMain {
@@ -1481,6 +1482,9 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
+    #logo .naslov {
+        font-size: 30px;
+    }
     footer h3 {
         font-size: medium;
     }
@@ -1517,7 +1521,8 @@ footer a {
     }
 }
 
-@media screen and (max-width: 480px) {
+/*radi bolje bez!!! */
+/* @media screen and (max-width: 480px) {
 
     footer h3 {
         font-size: medium;
@@ -1555,6 +1560,7 @@ footer a {
     .footerSocialMedia img {
         height: 30px;
         width: 30px;
+        margin: 5px;
     }
 
     .footerSocialMedia {
@@ -1564,4 +1570,14 @@ footer a {
         margin: auto;
 
     }
-}
+    .footerPartOne{
+        height: fit-content;
+        padding: 5px;
+    }
+} */
+
+
+
+
+
+
