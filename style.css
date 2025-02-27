@@ -978,12 +978,13 @@ nav ul li a:hover {
 /*ne vidim vise na jedno oko*/
 
 .KodMain {
-    width: 80%;
+    width: 90%; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    gap: 80px;
+    margin: auto auto 90px auto ;
+    gap: 60px; 
+    padding: 30px;
 }
 
 .formPromoKod {
@@ -991,119 +992,150 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    gap: 80px;
-    margin: 100px 0px;
+    gap: 60px;
+    margin: 60px 0;
 }
 
-.gornjiDio {
+.gornjiDio, .donjiDio {
     display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
     align-items: center;
+    gap: 30px; 
 }
 
-.donjiDio {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.sredina {
-    width: 80%;
+.inputKod {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    text-align: center;
 }
 
 .KodMain h2 {
     font-family: "Luckiest Guy", cursive, sans-serif;
     color: #fd7fc0;
-    margin-bottom: 5%;
-    font-size: 40px;
+    margin-bottom: 6%;
+    font-size: 45px; 
+    text-shadow: 4px 4px #ffb6e6;
 }
 
 .inputkod input {
-    padding: 20px;
-    border: solid 5px white;
-    box-shadow: #fd7fc0 10px 10px;
-    border-radius: 40px;
-    background-color: #ffface;
+    padding: 18px; 
+    border: solid 6px white;
+    box-shadow: 8px 8px #fd7fc0;
+    border-radius: 50px;
+    background-color: white;
+    width: 230px; 
+    font-size: 20px; 
+    text-align: center;
 }
 
 .inputKod h2 {
     color: #fb008a;
+    font-size: 32px;
 }
 
 .promoKod {
-
-    width: 80%;
-    padding: 20px;
-    font-size: 100px;
-    border-radius: 40px;
+    width: 100%; 
+    padding: 18px;
+    font-size: 55px; 
+    border-radius: 50px;
     background-color: #fd7fc0;
     border: solid 3px #fd7fc0;
     font-family: "Luckiest Guy", cursive, sans-serif;
     color: white;
-    font-weight: 400;
-}
-
-.pobijeda {
-    font-style: normal;
-    color: #fb008a;
-
-    font-size: 90px;
-    font-family: "Luckiest Guy", cursive, sans-serif;
-    font-weight: 1000;
-    font-style: normal;
-
-}
-
-.winDiv h1 {
-    position: absolute;
-    margin-top: 10vh;
-    width: 100%;
     text-align: center;
-
+    box-shadow: 6px 6px #ffb6e6;
 }
 
-.winDiv canvas {
 
-    overflow-y: hidden;
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
+@media (max-width: 1024px) {
+    .gornjiDio, .donjiDio {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
 
+    .promoKod {
+        font-size: 45px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .KodMain h2 {
+        font-size: 40px;
+    }
+
+    .inputKod h2 {
+        font-size: 28px;
+    }
+
+    .inputkod input {
+        width: 200px;
+        font-size: 18px;
+        padding: 15px;
+    }
 }
 
-nav ul li a:hover {
-    color: #fd7fc0;
-    text-decoration: none;
+@media (max-width: 768px) {
+    .gornjiDio, .donjiDio {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .promoKod {
+        font-size: 35px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .KodMain h2 {
+        font-size: 35px;
+    }
+
+    .inputKod h2 {
+        font-size: 26px;
+    }
+
+    .inputkod input {
+        width: 180px;
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 
-#donut {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
+@media (max-width: 480px) {
+    .gornjiDio, .donjiDio {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
 
-    cursor: move;
+    .promoKod {
+        font-size: 28px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .KodMain h2 {
+        font-size: 30px;
+    }
+
+    .inputKod h2 {
+        font-size: 24px;
+    }
+
+    .inputkod input {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 
-.povratak {
-    font-style: normal;
-    color: #fb008a;
-    font-size: 70px;
-    font-family: "Luckiest Guy", cursive, sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    margin-top: 90%;
-}
+ /*uuUUuuUUUuu aaAAAHHHHHhhhh*/
 
 .formaDiv {
     display: flex;
