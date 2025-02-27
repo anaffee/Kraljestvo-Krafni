@@ -220,26 +220,33 @@ nav ul li a:hover {
 
 /* another one*/
 
+
 .menu {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    margin: 100px auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
 }
+
 
 .top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
+
 
 .naslov-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .naslov {
@@ -250,49 +257,110 @@ nav ul li a:hover {
     font-size: 40px;
 }
 
+.naslov-container .naslov {
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    color: #fb008a;
+    font-size: 45px; 
+    text-transform: uppercase;
+}
+
 #draggable {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
-.inputi input,
-a {
+
+.inputi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inputi input[type="text"] {
     font-size: 16px;
-    padding: 5px;
-    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid #fb008a;
+    border-radius: 8px;
+    width: 250px;
+    transition: 0.3s ease;
 }
 
-input:last-child {
-    margin-right: 0px;
+.inputi input[type="text"]:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 0 0 5px #fb008a;
 }
 
 #searchButton {
     background-color: #fd7fc0;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    transition: 0.3s ease;
 }
 
 #searchButton:hover {
     background-color: #fb008a;
 }
 
+
 .items {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
+
 
 .item {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    border: 1px solid #3d2a26;
+    background-color: #fcf9e4b6;
+    border: 3px dashed #ff69b4c2;
+    padding: 10px;
+    text-align: center;
 }
+
+
+.item img {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.red {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.red button {
+    width: 35px;
+    height: 35px;
+    background-color: #ffceea;
+    font-size: 22px;
+    color: #fb008a;
+    border: 1px solid #fb008a;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.red button:hover {
+    background-color: #fb008a;
+    color: #ffceea;
+}
+
 
 .image-row {
     display: grid;
@@ -306,32 +374,38 @@ input:last-child {
     height: 70px;
 }
 
-.item img {
-    width: 230px;
-    height: 230px;
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .naslov-container .naslov {
+        font-size: 7vw;
+    }
+
+    #draggable {
+        width: 50px;
+        height: 50px;
+    }
+
+    .inputi {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputi input[type="text"] {
+        width: 80%;
+    }
+
+    #searchButton {
+        width: 100%;
+    }
 }
 
-.red {
-    display: flex;
-    flex-direction: row;
-    padding: 10px 20px;
-    justify-content: space-between;
-}
-
-.red button {
-    width: 30px;
-    height: 100%;
-    background-color: #ffceea;
-    font-size: 22px;
-    color: #fb008a;
-    border: 1px solid #fb008a;
-    cursor: pointer;
-}
-
-.red button:hover {
-    background-color: #fb008a;
-    color: #ffceea;
-}
+ /* WAIR WAIT WAT */
 
 .recipe {
     width: 1000px;
