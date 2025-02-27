@@ -819,6 +819,51 @@ nav ul li a:hover {
     pointer-events: auto;
 }
 
+/* responzivnost ovog kola i toga */
+@media (max-width: 1045px) {
+    .game {
+        flex-direction: column; 
+        height: auto;
+        align-items: center;
+    }
+
+    .wheel-container {
+        width: 90%;
+        max-width: 400px; 
+    }
+
+    #wheel {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .tableText {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .tableText table {
+        margin: 20px auto;
+    }
+
+    #spin {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .popup {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+    }
+}
+
+/* zedna sam */
+
 .mainRadnici {
     width: 80%;
     margin: 100px auto;
