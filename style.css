@@ -865,72 +865,117 @@ nav ul li a:hover {
 /* zedna sam */
 
 .mainRadnici {
-    width: 80%;
-    margin: 100px auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 180px auto;
 }
 
 .radnici {
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
-    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: #fff 7px solid;
-
-}
-
-.profile-name {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #fff9c4;
-
-}
-
-.profile-bio {
-    font-size: 16px;
-    color: #fff9c4;
-    margin-bottom: 15px;
-
 }
 
 .radnik {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    margin-top: 30px;
-    padding: 27px;
+    padding: 20px;
     text-align: center;
     background-color: #fd7fc0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.radnik:hover {
+    transform: translateY(-5px);
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff9c4;
 }
 
 .profile-posao {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin: 10px 0;
     color: #ffffff;
-    font-style: italic
+    font-style: italic;
 }
+
+.profile-bio {
+    font-size: 14px;
+    color: #fff9c4;
+    margin-bottom: 15px;
+}
+
 
 .radniciNaslov {
     font-family: "Luckiest Guy", cursive, sans-serif;
     color: #fb008a;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
     font-size: 40px;
+    text-align: center;
 }
 
-.skriveni-profile-pic {
-    width: 250px;
-    height: 250px;
+
+@media (max-width: 768px) {
+    .radnici {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .profile-pic {
+        max-width: 150px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-posao {
+        font-size: 14px;
+    }
+
+    .profile-bio {
+        font-size: 12px;
+    }
 }
+
+@media (max-width: 480px) {
+    .radnici {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profile-pic {
+        max-width: 120px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+    .profile-posao {
+        font-size: 12px;
+    }
+
+    .profile-bio {
+        font-size: 10px;
+    }
+}
+
+/*ne vidim vise na jedno oko*/
 
 .KodMain {
     width: 80%;
