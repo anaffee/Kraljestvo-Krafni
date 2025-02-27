@@ -62,25 +62,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="navigation">
-        <a href="#kraljevstvo_krafni">
+<div class="navigation">
+    <a href="#kraljevstvo_krafni">
         <div id="logo">
             <img src="img/logo.png" alt="krafna">
             <h1 class="naslov">Kraljevstvo Krafni</h1>
         </div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#menu">Meni</a></li>
-                <li><a href="#recepti">Recepti</a></li>
-                <li><a href="#prijava">Prijava</a></li>
-                <li><a href="#game">Kolo sreće</a></li>
-                <li><a href="#pitanja">Pitanja</a></li>
-                <li><a href="#Radnici">Radnici</a></li>
-                <li><a href="#KodMain">Promo kod</a></li>
-            </ul>
-        </nav>
-    </div>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <nav class="nav-menu">
+        <button class="close-menu" onclick="toggleMenu()">&times;</button>
+        <ul>
+            <li><a href="#menu">Meni</a></li>
+            <li><a href="#recepti">Recepti</a></li>
+            <li><a href="#prijava">Prijava</a></li>
+            <li><a href="#game">Kolo sreće</a></li>
+            <li><a href="#pitanja">Pitanja</a></li>
+            <li><a href="#Radnici">Radnici</a></li>
+            <li><a href="#KodMain">Promo kod</a></li>
+        </ul>
+    </nav>
+</div>
+
     <div class="header" id="kraljevstvo_krafni">
         <div class="text">
             <h1>Kraljevstvo <br> Krafni</h1>
