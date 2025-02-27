@@ -8,6 +8,7 @@ body {
     background: #ffface;
     color: #3d2a26;
 }
+
 .navigation {
     color: #fb008a;
     padding: 15px;
@@ -15,9 +16,12 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #ffface;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 3;
+    background-color: #ffface;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #logo {
@@ -78,20 +82,85 @@ nav ul li a:hover {
     right: 10px;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 740px;
+    background-color: #fd7fc0;
+    padding: 0% 5% 0% 12%;
+    align-items: center;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff9c4;
+    min-width: 320px;
+}
+
+.text h1 {
+    font-size: 80px;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.text p {
+    margin-top: 24px;
+    width: 430px;
+    text-align: justify;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.image {
+    border: none;
+    padding: 0;
+    margin-top: 85px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image img {
+    width: 680px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1305px) {
+    .header {
+        padding: 5%;
+        gap: 10px;
+    }
+
+    .image img {
+        width: 500px;
+    }
+}
+
 @media (max-width: 1024px) {
     #logo img {
         width: 45px;
         height: 45px;
     }
+
     .navigation {
         padding: 10px;
     }
-}
 
-@media (max-width: 992px) {
     .hamburger {
         display: block;
-        color:#fb008a;
+        color: #fb008a;
     }
 
     .nav-menu {
@@ -125,54 +194,31 @@ nav ul li a:hover {
     .close-menu {
         display: block;
     }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 5%;
+        align-items: center;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .image {
+        display: none;
+    }
 }
 
-/* do tu pazi*/
-
-.header {
-    display: flex;
-    flex-direction: row;
-    height: 740px;
-    background-color: #fd7fc0;
-    padding: 0% 5% 0% 12%;
+@media (max-width: 768px) {
+    .header {
+        padding: 5%;
+        margin-top: 65px;
+    }
 }
 
-.text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #fff9c4;
-}
 
-.text h1 {
-    font-size: 80px;
-    font-family: "Luckiest Guy", cursive, sans-serif;
-    font-weight: 400;
-}
 
-.text p {
-    margin-top: 24px;
-    width: 430px;
-    height: auto;
-    text-align: justify;
-    font-size: 18px;
-    font-style: italic;
-    line-height: 1.4;
-}
-
-.image {
-    border: 1px solid #fd7fc0;
-    padding: 2px;
-    margin-top: 85px;
-    z-index: 1;
-}
-
-.image img {
-    width: 680px;
-    height: 680px;
-}
+/* another one*/
 
 .menu {
     display: flex;
