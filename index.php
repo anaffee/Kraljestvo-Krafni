@@ -499,7 +499,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <h2>ZAPRATITE NAS</h2><br>
                                         <div class="footerSocialMedia">
                                             <a href="https://www.instagram.com/"><img class="instagram"
-                                                    src="./img/insta.png"></a>
+                                                    src="./img/instagram.png"></a>
                                             <a href="https://www.youtube.com/"><img class="facebook"
                                                     src="./img/youtube.png"></a>
                                             <a href="https://www.facebook.com/"><img class="youtube"
