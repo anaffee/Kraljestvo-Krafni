@@ -130,9 +130,8 @@ nav ul li a:hover {
 }
 
 .image img {
-    width: 680px;
+    width: 700px;
     height: auto;
-    max-width: 100%;
     display: block;
 }
 
@@ -207,6 +206,11 @@ nav ul li a:hover {
     .image {
         display: none;
     }
+
+    .text p {
+        text-align: center;
+        margin: 10px auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -260,7 +264,7 @@ nav ul li a:hover {
 .naslov-container .naslov {
     font-family: "Luckiest Guy", cursive, sans-serif;
     color: #fb008a;
-    font-size: 45px; 
+    font-size: 45px;
     text-transform: uppercase;
 }
 
@@ -331,7 +335,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 230px;
     height: auto;
-    border-radius: 8px;
+    margin: 0px auto;
 }
 
 
@@ -403,12 +407,17 @@ nav ul li a:hover {
     #searchButton {
         width: 100%;
     }
+
+    .item {
+        width: 70%;
+        margin: 0px auto;
+    }
 }
 
- /* WAIR WAIT WAT */
+/* WAIR WAIT WAT */
 
- .recipe {
-    max-width: 1100px; 
+.recipe {
+    max-width: 1100px;
     width: 95%;
     margin: 50px auto;
     display: flex;
@@ -419,8 +428,8 @@ nav ul li a:hover {
 
 
 .recipe .naslov {
-    font-size: 46px; 
-   
+    font-size: 46px;
+
 }
 
 
@@ -462,7 +471,7 @@ nav ul li a:hover {
 
 .card img {
     max-width: 100%;
-    width: 400px; 
+    width: 400px;
     height: auto;
     border-radius: 12px;
     object-fit: cover;
@@ -470,12 +479,12 @@ nav ul li a:hover {
 
 
 .ispis {
-    max-width: 500px; 
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    font-size: 20px; 
+    font-size: 20px;
     text-align: justify;
     box-sizing: border-box;
     padding: 25px;
@@ -483,7 +492,7 @@ nav ul li a:hover {
 }
 
 .ispis span {
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -822,14 +831,14 @@ nav ul li a:hover {
 /* responzivnost ovog kola i toga */
 @media (max-width: 1045px) {
     .game {
-        flex-direction: column; 
+        flex-direction: column;
         height: auto;
         align-items: center;
     }
 
     .wheel-container {
         width: 90%;
-        max-width: 400px; 
+        max-width: 400px;
     }
 
     #wheel {
@@ -867,7 +876,7 @@ nav ul li a:hover {
 .mainRadnici {
     width: 90%;
     max-width: 1200px;
-    margin: 180px auto;
+    margin: 100px auto;
 }
 
 .radnici {
@@ -976,14 +985,17 @@ nav ul li a:hover {
 }
 
 /*ne vidim vise na jedno oko*/
+.mainRadnici {
+    margin: 50px auto;
+}
 
 .KodMain {
-    width: 90%; 
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto auto 90px auto ;
-    gap: 60px; 
+    margin: auto auto 90px auto;
+    gap: 60px;
     padding: 30px;
 }
 
@@ -996,13 +1008,14 @@ nav ul li a:hover {
     margin: 60px 0;
 }
 
-.gornjiDio, .donjiDio {
+.gornjiDio,
+.donjiDio {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 30px; 
+    gap: 30px;
 }
 
 .inputKod {
@@ -1016,18 +1029,18 @@ nav ul li a:hover {
     font-family: "Luckiest Guy", cursive, sans-serif;
     color: #fd7fc0;
     margin-bottom: 6%;
-    font-size: 45px; 
+    font-size: 45px;
     text-shadow: 4px 4px #ffb6e6;
 }
 
 .inputkod input {
-    padding: 18px; 
+    padding: 18px;
     border: solid 6px white;
     box-shadow: 8px 8px #fd7fc0;
     border-radius: 50px;
     background-color: white;
-    width: 230px; 
-    font-size: 20px; 
+    width: 230px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -1037,9 +1050,9 @@ nav ul li a:hover {
 }
 
 .promoKod {
-    width: 100%; 
+    width: 100%;
     padding: 18px;
-    font-size: 55px; 
+    font-size: 55px;
     border-radius: 50px;
     background-color: #fd7fc0;
     border: solid 3px #fd7fc0;
@@ -1051,7 +1064,9 @@ nav ul li a:hover {
 
 
 @media (max-width: 1024px) {
-    .gornjiDio, .donjiDio {
+
+    .gornjiDio,
+    .donjiDio {
         flex-wrap: wrap;
         justify-content: center;
         gap: 25px;
@@ -1079,7 +1094,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    .gornjiDio, .donjiDio {
+
+    .gornjiDio,
+    .donjiDio {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
@@ -1107,7 +1124,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
-    .gornjiDio, .donjiDio {
+
+    .gornjiDio,
+    .donjiDio {
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -1135,7 +1154,7 @@ nav ul li a:hover {
     }
 }
 
- /*uuUUuuUUUuu aaAAAHHHHHhhhh*/
+/*uuUUuuUUUuu aaAAAHHHHHhhhh*/
 
 .formaDiv {
     display: flex;
@@ -1462,6 +1481,7 @@ footer a {
         width: 100%;
         padding-right: 0;
     }
+
     /* .footerPartTwo{
         margin-top: 40px;
     } */
@@ -1485,6 +1505,7 @@ footer a {
     #logo .naslov {
         font-size: 30px;
     }
+
     footer h3 {
         font-size: medium;
     }
@@ -1575,9 +1596,3 @@ footer a {
         padding: 5px;
     }
 } */
-
-
-
-
-
-
