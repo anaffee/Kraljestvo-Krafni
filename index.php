@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'prijavaKod' => 'kraljevina',
         'kolo' => 'heksametar',
         'radnici' => 'pekara',
-        'footerKod' => 'hallstatt'
+        'footerKod' => 'glazura'
     ];
 
     $errors = [];
