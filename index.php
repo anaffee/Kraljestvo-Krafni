@@ -535,11 +535,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </footer>
     </div>
     <script src="main.js"></script>
-    <?php
-    if (isset($_GET['action']) && $_GET['action'] === 'get_flag') {
-        include 'api.php'; 
-        exit;
-    }
-    ?>
 </body>
 </html>

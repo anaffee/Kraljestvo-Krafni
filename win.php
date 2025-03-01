@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div class="winDiv">
-            <svg id="donut" width="240" height="240" ></svg>
-
-        <h1 class="naslov pobijeda">BRAVO! USPIJELI STE!!!</h1>
+      <center>
+        <svg id="donut" width="240" height="240" ></svg>
+        <h1 class="naslov">BRAVO! USPIJELI STE!!!</h1>
         <canvas id="canvas"></canvas>
+      </center>
     </div>
     <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
 
