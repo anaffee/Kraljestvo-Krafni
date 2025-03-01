@@ -158,6 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                 }
+                
                 $recepti = mysqli_query($conn, "SELECT * FROM recepti");
 
                 if (!isset($_GET['recipe_id'])) {
